@@ -16,7 +16,7 @@ var Version string = "1.1.0"
 func main() {
 
 	//cli kit
-	fileName := flag.String("file", "server.go", "File to watch and run(Handles only one file)") //it was only able to handle file name(server works), not /dir/filename(server doesnt work).
+	fileName := flag.String("file", "server.go", "File to watch and run(Handles only one file)")
 	showVersion := flag.Bool("version", false, "Show version information")
 	showHelp := flag.Bool("help", false, "Show help information")
 

@@ -11,12 +11,12 @@ import (
 	"github.com/srivatsa-bot/gomon/watcher"
 )
 
-var Version string = "1.0.0"
+var Version string = "1.1.0"
 
 func main() {
 
 	//cli kit
-	fileName := flag.String("file", "server.go", "File to watch and run(Handles only one file)")
+	fileName := flag.String("file", "server.go", "File to watch and run(Handles only one file)") //it was only able to handle file name(server works), not /dir/filename(server doesnt work).
 	showVersion := flag.Bool("version", false, "Show version information")
 	showHelp := flag.Bool("help", false, "Show help information")
 
@@ -44,7 +44,7 @@ func main() {
 
 		//if user enters more than one non flag argument
 		if flag.NArg() > 1 {
-			logger.Info("Warning: Multiple files provided. Only watching %s", *fileName)
+			logger.Info("Warning: Multiple files provided. Only watching %s", targetFile) //(changed) form *flename -> targetfile
 		}
 	}
 

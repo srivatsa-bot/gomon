@@ -1,6 +1,6 @@
 # Gomon  
 
-A simple, lightweight file watcher that automatically restarts your application when code changes are detected.  
+A simple file watcher that automatically restarts your application when code changes are detected.  
 For now, it can only watch one file at a time.  
 
 ## Installation  
@@ -15,7 +15,7 @@ Add this path to your `.bashrc`:
 export PATH=$PATH:$(go env GOPATH)/bin
 ```
 
-Then, source the `.bashrc` file:  
+source the `.bashrc` file to save the changes:  
 
 ```bash
 source ~/.bashrc
@@ -51,5 +51,6 @@ gomon --help
 ```
 
 ---
-Go to test branch to get the binaries directly
+Go to test branch to get the binaries directly.
+
 Feel free to contribute and improve **Gomon**! 🚀

@@ -86,10 +86,9 @@ func (sp *ServerProcess) Kill() error {
 			if err = syscall.Kill(-pgid, syscall.SIGTERM); err != nil {
 				syscall.Kill(-pgid, syscall.SIGKILL) //if sigterm fails force kill it using sigkill
 			}
-		case "Darwin":
-			if err = syscall.Kill(-pgid, syscall.SIGKILL); err != nil {
-				logger.Error("Unable to kill the process")
-				return err
+		case "darwin":
+			if err = syscall.Kill(-pgid, syscall.SIGTERM); err != nil {
+				syscall.Kill(-pgid, syscall.SIGKILL) 
 			}
 
 		}

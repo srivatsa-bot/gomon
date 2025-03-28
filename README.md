@@ -25,7 +25,7 @@ source ~/.bashrc
 
 - 🔄 Auto-reloads your application when file changes are detected (on save)  
 - 🌐 Supports Go, JavaScript, and Python  
-- 💻 Works only on UNIX systems  
+- 💻 Works only on UNIX machines.(Note: On macOS, you may encounter issues when running applications that involve ports, such as HTTP servers).
 
 ## Usage  
 
